@@ -1,0 +1,116 @@
+.form_courses {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.title_form_courses {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.container_input {
+  height: 50px;
+  border: 2px solid var(--color-1);
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: var(--border-radius-2);
+  margin: 5px 10px 5px 0;
+}
+.name_input_container {
+  top: -10px;
+  left: 3px;
+  position: absolute;
+  font-size: 13px;
+  padding: 0 5px;
+  backdrop-filter: blur(3px);
+  border-radius: 5px;
+  color: var(--text-color-2);
+}
+.input_name_course {
+  width: 300px;
+  min-width: 200px;
+  font-family: "Chakra Petch", sans-serif;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  background-color: transparent;
+  color: var(--text-color-3);
+}
+
+/* dia de la semana */
+.container_input input[type="radio"] {
+  display: none;
+}
+.day_week {
+  width: 25px;
+  height: 25px;
+  margin: 3px;
+  cursor: pointer;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-2);
+
+  transition: 0.3s ease-in-out;
+}
+.container_input input[type="radio"]:checked + .day_week {
+  background-color: var(--color-3);
+}
+.container_input input[type="radio"]:hover + .day_week {
+  background-color: var(--color-3);
+}
+.container_button_send {
+  height: 50px;
+  display: flex;
+}
+.button_send {
+  padding: 0 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-family: "Chakra Petch", sans-serif;
+  transition: 0.3s linear;
+  background: var(--color-1);
+  color: var(--text-color-2);
+}
+.button_send:hover {
+  color: var(--text-color-1);
+  background: var(--color-3);
+  box-shadow: 2px 2px 10px 0px var(--color-5);
+}
+.button_send:active {
+  transform: scale(0.9, 0.9);
+}
+
+/* css de los select de zona horaria pm o am */
+.select_format {
+  appearance: none;
+  font-size: 0.8rem;
+  outline: none;
+  background: transparent;
+  color: var(--text-color-3);
+  cursor: pointer;
+  border: 2px solid var(--color-1);
+  margin-left: 10px;
+  padding: 5px 7px;
+  border-radius: var(--border-radius-2);
+  transition: 0.3s linear;
+}
+.select_format:focus {
+  border-color: var(--color-3);
+}
+.select_format option{
+  color: black;
+}

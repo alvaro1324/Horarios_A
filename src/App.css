@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,500;1,700&display=swap");
+:root {
+  --text-color-1: rgb(255, 255, 255);
+  --text-color-2: #e8ecf0;
+  --text-color-3: #cdd0d3;
+  --text-color-4: #bdc1c6ab;
+
+  --color-1: #838994;
+  --color-2: rgba(236, 236, 236, 0.223);
+  --color-3: #3a86ff;
+  --color-4: rgba(236, 236, 236, 0.111);
+  --color-5: rgba(35, 33, 33, 0.288);
+
+  --background-1: #192229;
+  --background-2: rgba(255, 255, 255, 0.089);
+  --background-3: #70e0003d;
+  --background-4: #f725846b;
+  --background-5: #390ca36e;
+
+  --border-radius-1: 10px;
+  --border-radius-2: 5px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  font-family: "Chakra Petch", sans-serif;
+}
+body {
+  background-color: var(--background-1);
+  color: var(--text-color-1);
+}
+/* modificación de la barra de scroll */
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+  width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.484);
+  border-radius: 10px;
+}
+.App {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.container_aplication {
+  width: 95%;
+  max-width: 1350px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* CSS DEL SUB CONTAINER CUADRADOS */
+.subContainer_view {
+  width: 100%;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: var(--border-radius-1);
+  background-color: var(--background-2);
+}
+.subContainer_view:first-child {
+  margin-bottom: 0;
+}
+.subContainer_view:last-child {
+  margin-top: 0;
+}
+
+/* css del container donde se encuentra el horario */
+
+.container_schedule {
+  width: 100%;
+  min-height: calc(100vh - 200px);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 7px;
+  margin: 10px 0;
+}
+.container_title_day {
+  height: 45px;
+  background-color: var(--color-3);
+  border-radius: var(--border-radius-2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  letter-spacing: 3px;
+}
